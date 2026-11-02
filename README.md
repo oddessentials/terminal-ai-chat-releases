@@ -1,56 +1,31 @@
 # terminal-ai-chat
 
-A terminal client for your ChatGPT web session, for Windows, Linux and macOS.
-It uses your normal ChatGPT login and needs no API key. Sign-in happens in a
-dedicated, sandboxed Chrome that the tool provisions privately: on Windows that
-Chrome runs inside WSL, on Linux and macOS it runs directly on your machine.
+Chat with ChatGPT in your terminal, using your normal ChatGPT login. No API key needed.
 
-This repository publishes the signed release binaries, install scripts and
-checksums. See [Releases](https://github.com/oddessentials/terminal-ai-chat-releases/releases).
+## Install
 
-## Requirements
-
-- A desktop session. Sign-in happens in a real browser window.
-- Windows 10 or 11 (x86-64) with WSL and the `Ubuntu-24.04` distribution.
-- Linux x86-64 on X11 or Wayland, with unprivileged user namespaces enabled.
-- macOS on Apple Silicon or Intel.
-
-## Install and update
-
-Linux and macOS:
+**macOS and Linux**
 
 ```sh
 curl -fsSL https://github.com/oddessentials/terminal-ai-chat-releases/releases/latest/download/install.sh | sh
 ```
 
-Windows (PowerShell):
+**Windows** (needs [WSL](https://learn.microsoft.com/windows/wsl/install) with Ubuntu 24.04)
 
 ```powershell
 irm https://github.com/oddessentials/terminal-ai-chat-releases/releases/latest/download/install.ps1 | iex
 ```
 
-Run the same command again to update. The script checks the download against
-the release's `SHA256SUMS` (and, on Windows, its Authenticode signature) and
-sets up the private browser runtime.
+To update, run the same command again.
 
-Homebrew (macOS and Linux) and WinGet:
+Prefer a package manager? Use `brew install oddessentials/tap/terminal-ai-chat` or
+`winget install OddEssentials.TerminalAIChat`, then run `terminal-ai-chat setup` once.
 
-```sh
-brew install oddessentials/tap/terminal-ai-chat
-```
-
-```powershell
-winget install OddEssentials.TerminalAIChat
-```
-
-These install only the program. Run `terminal-ai-chat setup` once afterwards,
-and again if `terminal-ai-chat` asks for it after an upgrade.
-
-## Run
+## Use
 
 ```sh
 terminal-ai-chat
 ```
 
-Sign in to ChatGPT in the Chrome window that opens, return to the terminal and
-press Enter. Type `/exit` when you're done.
+Sign in to ChatGPT in the browser window that opens, then press **Enter** in the terminal and start chatting.
+Type `/exit` to quit.
