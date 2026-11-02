@@ -17,6 +17,7 @@ irm https://github.com/oddessentials/terminal-ai-chat-releases/releases/latest/d
 ```
 
 To update, run the same command again.
+Check it's installed with `terminal-ai-chat --version`.
 
 Prefer a package manager? Use `brew install oddessentials/tap/terminal-ai-chat` or
 `winget install OddEssentials.TerminalAIChat`, then run `terminal-ai-chat setup` once.
